@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Honey's Mobile Links</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- 🔗 Custom Purple Theme and Icons -->
+  <link rel="stylesheet" href="purpletheme/purpletheme.min.css" />
+  <link rel="stylesheet" href="purpletheme/jquery.mobile.icons.min.css" />
+
+  <!-- ✅ Must load the default structure AFTER your theme -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+
+  <!-- jQuery and jQuery Mobile JS -->
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Slide-Out Panel -->
+  <div data-role="panel" id="mypanel" data-display="overlay">
+    <h3>Quick Links</h3>
+    <ul data-role="listview">
+      <li><a href="#selfCare">Self-Care Tips</a></li>
+      <li><a href="#visionBoard">Vision Board</a></li>
+      <li><a href="#studyTracker">Study Tracker</a></li>
+    </ul>
+  </div>
+
+  <!-- Home Page -->
+  <div data-role="page" id="home">
+    <div data-role="header">
+      <a href="#mypanel" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-notext">Menu</a>
+      <h1>My Favorite Links</h1>
+    </div>
+
+    <div data-role="content">
+      <ul data-role="listview">
+        <li><a href="#page2">Go to My Journal</a></li>
+        <li><a href="#page3">Visit Inspiration Board</a></li>
+        <li><a href="http://amazon.com" target="_blank">Shop on Amazon</a></li>
+        <li><a href="#selfCare">Self-Care Tips</a></li>
+        <li><a href="#visionBoard">Vision Board</a></li>
+        <li><a href="#studyTracker">Study Tracker</a></li>
+      </ul>
+    </div>
+
+    <div data-role="footer">
+      <h4>Honey's Link Hub</h4>
+    </div>
+  </div>
+
+  <!-- Page 2 -->
+  <div data-role="page" id="page2">
+    <div data-role="header">
+      <h1>My Journal</h1>
+    </div>
+    <div data-role="content">
+      <p>This is where I keep my daily thoughts and goals.</p>
+      <a href="#home" data-role="button">Back to Home</a>
+    </div>
+    <div data-role="footer">
+      <h4>Page 2</h4>
+    </div>
+  </div>
+
+  <!-- Page 3 -->
+  <div data-role="page" id="page3">
+    <div data-role="header">
+      <h1>Inspiration Board</h1>
+    </div>
+    <div data-role="content">
+      <p>Photos, quotes, and reminders that inspire me.</p>
+      <a href="#home" data-role="button">Back to Home</a>
+    </div>
+    <div data-role="footer">
+      <h4>Page 3</h4>
+    </div>
+  </div>
+
+  <!-- Self-Care Tips Page -->
+  <div data-role="page" id="selfCare">
+    <div data-role="header">
+      <h1>Self-Care Tips</h1>
+    </div>
+    <div data-role="content">
+      <p>Ways I practice daily self-care:</p>
+      <ul data-role="listview" data-inset="true">
+        <li>Take 10-minute quiet breaks</li>
+        <li>Drink warm tea in the evening</li>
+        <li>Write 3 things I’m grateful for</li>
+      </ul>
+      <a href="#home" data-role="button" data-icon="back" data-rel="back">Back</a>
+    </div>
+    <div data-role="footer">
+      <h4>Take care of you 💖</h4>
+    </div>
+  </div>
+
+  <!-- Vision Board Page -->
+  <div data-role="page" id="visionBoard">
+    <div data-role="header">
+      <h1>Vision Board</h1>
+    </div>
+    <div data-role="content">
+      <p>Steps to reach my vision:</p>
+      <ol data-role="listview" data-inset="true">
+        <li>Finish school</li>
+        <li>Get a tech job</li>
+        <li>Start my own business</li>
+      </ol>
+
+      <p>Dream destinations (searchable):</p>
+      <ul data-role="listview" data-filter="true" data-inset="true">
+        <li>Dubai</li>
+        <li>Makkah</li>
+        <li>Kenya</li>
+        <li>Japan</li>
+        <li>Maldives</li>
+      </ul>
+
+      <h3>Top 3 Focus Goals</h3>
+      <div class="ui-grid-b">
+        <div class="ui-block-a">
+          <div class="ui-bar ui-bar-a" style="height:100px">
+            <strong>Career</strong><br>
+            Land a tech job after graduation
+          </div>
+        </div>
+        <div class="ui-block-b">
+          <div class="ui-bar ui-bar-a" style="height:100px">
+            <strong>Health</strong><br>
+            Stay active with morning workouts
+          </div>
+        </div>
+        <div class="ui-block-c">
+          <div class="ui-bar ui-bar-a" style="height:100px">
+            <strong>Travel</strong><br>
+            Visit Kenya, Dubai, and Makkah
+          </div>
+        </div>
+      </div>
+      <a href="#home" data-role="button" data-icon="back" data-rel="back">Back</a>
+    </div>
+    <div data-role="footer">
+      <h4>Dream Big ✨</h4>
+    </div>
+  </div>
+
+  <!-- Study Tracker Page -->
+  <div data-role="page" id="studyTracker">
+    <div data-role="header">
+      <h1>Study Tracker</h1>
+    </div>
+    <div data-role="content">
+      <p>Track your weekly study goals below:</p>
+      <form>
+        <label for="subject">Subject:</label>
+        <input type="text" name="subject" id="subject" placeholder="e.g. Java Programming">
+        <label for="hours">Study Hours:</label>
+        <input type="number" name="hours" id="hours" placeholder="e.g. 2">
+        <label for="notes">Notes:</label>
+        <textarea name="notes" id="notes" placeholder="Any notes..."></textarea>
+        <input type="submit" value="Submit">
+      </form>
+      <a href="#home" data-role="button" data-icon="back" data-rel="back">Back</a>
+    </div>
+    <div data-role="footer">
+      <h4>Keep Going 📚</h4>
+    </div>
+  </div>
+
+</body>
+</html>
